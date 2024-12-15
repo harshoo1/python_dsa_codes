@@ -9,9 +9,9 @@ linked list
   
   operation on linked list
     1. insertion / deletion
-        .beginning
-        .end
-        .in between at some random place
+        a.beginning
+        b.end
+        c.in between at some random place
     2. print linked list
     3. searching for the element
          
