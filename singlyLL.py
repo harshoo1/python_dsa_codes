@@ -66,20 +66,18 @@ class SinglyLL:
     #11. delete some random element
     def deleteRandomNode(self, data):
         if self.start is None:
-            pass
-        elif self.start.next is None:
-            if self.start.val == data:
-                self.start = None
-            else:
-                temp = self.start
-                if temp.val ==data:
-                    self.start = temp.next
-                else:
-                    while temp.next is not None:
-                        if temp.next.val == data:
-                            temp.next = temp.next.next
-                            break
-                        temp = temp.next
+            return
+        if self.start.val == data:
+            self.start = self.start.next
+        else:
+            temp = self.start
+            while temp.next is not None:
+                if temp.next.val == data:
+                    temp.next = temp.next.next
+                    return
+            temp = temp.next
+
+
 # function to access the slliterator 
     def __iter__(self):
         return slliterator(self.start)
