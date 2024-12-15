@@ -23,7 +23,7 @@ class Stack:
 #5. peek 
     def peek(self):
         if not self.is_empty():
-            return self.mylist.value
+            return self.mylist.start.val
 #6. size
     def size(self):
         return self.value_count         
