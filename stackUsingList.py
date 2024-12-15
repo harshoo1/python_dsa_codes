@@ -42,4 +42,4 @@ stack1.pop()
 print(stack1.peek())
 
 # we can't use iterator here to access elements in stack
-
+# here we have used list as object instance member to make stack
