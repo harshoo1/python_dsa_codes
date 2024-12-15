@@ -1,7 +1,7 @@
 """ Stack using list 2
 extending list class to implement stack """
 
-#1. using features of list class to make stack
+#1. inheriting list class to make stack |  stack as child class and list as the  parent class
 class Stack(list):
 #2. is_empty()
     def is_empty(self):
