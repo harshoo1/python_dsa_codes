@@ -8,10 +8,10 @@ class Node:
 class Stack:
     def __init__(self):
         self.start = None
-        self.value_count = None       
+        self.value_count = 0    
 #2. is_empty()
     def is_empty(self):
-        return self.start == None
+        return self.start is None
 #3. push()
     def push(self,data):
         n = Node(data,self.start)
@@ -19,7 +19,7 @@ class Stack:
         self.value_count += 1
 #4. pop()
     def pop(self):
-        if not self.is_empty:
+        if not self.is_empty():
             data = self.start.value
             self.start = self.start.next
             self.value_count -= 1 
@@ -29,12 +29,12 @@ class Stack:
 #5. peek()
     def peek(self):
         if not self.is_empty():
-            return self.start.item
+            return self.start.value
         else:
-            raise self.is_empty()
+            raise IndexError("Stack is empty")
 #6. size()
     def size(self):
-        return self.item_count
+        return self.value_count
     
 #main code
 stack1 = Stack()
